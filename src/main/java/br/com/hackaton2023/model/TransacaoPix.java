@@ -7,9 +7,22 @@ public class TransacaoPix {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@ManytoOne
-	private Usuario usuario;
-	private Double valorDoPix;
+	@ManyToOne
+	private Usuario remetente;
+	@ManyToOne
+	private Usuario destinatario;
+	private Double valor;
+	private Status status;
+
+	public TransacaoPix() {
+	}
+
+	public TransacaoPix(Usuario remetente, Usuario destinatario, Double valor) {
+		this.remetente = remetente;
+		this.destinatario = destinatario;
+		this.valor = valor;
+		this.status = Status.PENDENTE;
+	}
 
 	public Long getId() {
 		return id;
@@ -19,29 +32,40 @@ public class TransacaoPix {
 		this.id = id;
 	}
 
-	public Usuario getPaga() {
-		return paga;
+	public Usuario getRemetente() {
+		return remetente;
 	}
 
-	public void setPaga(Usuario paga) {
-		this.paga = paga;
+	public void setRemetente(Usuario remetente) {
+		this.remetente = remetente;
 	}
 
-	public Usuario getRecebe() {
-		return recebe;
+	public Usuario getDestinatario() {
+		return destinatario;
 	}
 
-	public void setRecebe(Usuario recebe) {
-		this.recebe = recebe;
+	public void setDestinatario(Usuario destinatario) {
+		this.destinatario = destinatario;
 	}
 
-	public Double getValorDoPix() {
-		return valorDoPix;
+	public Double getValor() {
+		return valor;
 	}
 
-	public void setValorDoPix(Double valorDoPix) {
-		this.valorDoPix = valorDoPix;
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public enum Status {
+		PENDENTE, FINALIZADA
 	}
 
 }
-

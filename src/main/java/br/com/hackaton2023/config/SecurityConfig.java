@@ -23,6 +23,14 @@ public class SecurityConfig {
                 .authorizeHttpRequests( requests -> requests
                         .requestMatchers("/api/pix/chave", "/api/pix/chave/{id}").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/pix/chave").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/pix/autenticacao/usuario", "/api/pix/autenticacao/instituicao").permitAll()
+                        .requestMatchers(HttpMethod.POST,
+                                "/api/pix/transacoes/pagamento",
+                                "/api/pix/transacoes/transferencia",
+                                "/api/pix/transacoes/{id}",
+                                "/api/pix/transacoes/historico/{usuarioId}",
+                                "/api/pix/transacoes/status/{id}"
+                                ).permitAll()
                         .anyRequest().authenticated()
                 ).formLogin((form) -> form
                         .loginPage("/login")

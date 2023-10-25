@@ -1,8 +1,6 @@
 package br.com.hackaton2023.controller;
 
-
 import br.com.hackaton2023.model.Instituicao;
-import br.com.hackaton2023.model.Pix;
 import br.com.hackaton2023.model.Usuario;
 import br.com.hackaton2023.repository.InstituicaoRepository;
 import br.com.hackaton2023.repository.UsuarioRepository;
@@ -22,8 +20,10 @@ public class AutenticacaoController {
     private InstituicaoRepository instituicaoRepo;
 
     @PostMapping("/usuario")
-    public Usuario autenticarUsuario(@RequestParam String nome, String cpf) {
-        Usuario usuario = new Usuario(nome, cpf);
+    public Usuario autenticarUsuario(@RequestParam String nome, String cpf, Long instituicaoId) {
+        Instituicao instituicao = instituicaoRepo.findById(instituicaoId).get();
+
+        Usuario usuario = new Usuario(nome, cpf, instituicao);
         Usuario result = usuarioRepo.save(usuario);
 
         return result;

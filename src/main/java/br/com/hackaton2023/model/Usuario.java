@@ -9,12 +9,16 @@ public class Usuario {
 	private Long id;
 	private String nome;
 	private String cpf;
+	@ManyToOne
+	@JoinColumn(name = "instituicao_id")
+	private Instituicao instituicao;
 	
 	public Usuario(){}
 
-	public Usuario(String nome, String cpf) {
+	public Usuario(String nome, String cpf, Instituicao instituicao) {
 		this.nome = nome;
 		this.cpf = cpf;
+		this.instituicao = instituicao;
 	}
 
 	public Long getId() {

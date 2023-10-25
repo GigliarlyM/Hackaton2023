@@ -21,10 +21,8 @@ public class PixController {
 	@Autowired
 	private UsuarioRepository usuarioRepo;
 
-	private static Logger logger = LoggerFactory.getLogger(PixController.class);
-
 	@GetMapping
-	private List<Pix> getPix() {
+	private Iterable<Pix> getPix() {
 		return pixRepo.findAll();
 	}
 
