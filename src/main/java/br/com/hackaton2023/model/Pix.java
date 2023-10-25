@@ -1,8 +1,14 @@
 package br.com.hackaton2023.model;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter @Setter
+@DynamicUpdate
 public class Pix {
 	
 	@Id
