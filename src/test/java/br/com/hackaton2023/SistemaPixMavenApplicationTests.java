@@ -1,13 +1,13 @@
-package br.com.hackaton2023.SistemaPix;
+package br.com.hackaton2023;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SistemaPixApplicationTests {
+class SistemaPixMavenApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

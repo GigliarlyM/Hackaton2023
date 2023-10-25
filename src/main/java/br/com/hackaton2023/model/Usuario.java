@@ -1,4 +1,4 @@
-package br.com.hackaton2023.SistemaPix.model;
+package br.com.hackaton2023.model;
 
 import jakarta.persistence.*;
 
@@ -6,18 +6,16 @@ import jakarta.persistence.*;
 public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	@Column(name = "nome")
 	private String nome;
 	@Column(name = "cpf")
 	private String cpf;
-	@OneToOne
-	private Conta conta;
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -31,11 +29,5 @@ public class Usuario {
 	}
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
-	}
-	public Conta getPix() {
-		return conta;
-	}
-	public void setPix(Conta pix) {
-		this.conta = pix;
 	}
 }
